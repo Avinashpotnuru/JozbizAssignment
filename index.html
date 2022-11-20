@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="background_styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="mainbg">
+        <!--  /*section1*/ -->
+        <nav class="navbar">
+            <div class="brand-title">
+                <svg width="129" height="64" viewBox="0 0 129 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect y="-0.25" width="129" height="64.5" fill="url(#pattern0)" />
+                    <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_1_129" transform="scale(0.000833333 0.00166667)" />
+                        </pattern>
+                        <image id="image0_1_129" width="1200" height="600" xlink:href="data:image/png;base64,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" />
+                    </defs>
+                </svg>
+                <h3 class="logo-head">NinjaMail</h3>
+                <button class="sign-up1">SIGN UP FREE</button>
+            </div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#">FEATURES</a></li>
+                    <li><a href="#">PRICING</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">PARTNERS</a></li>
+                    <li><a class="sign-up" href="#">SIGN UP FREE</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- section2 -->
+        <div class="section2">
+            <div class="header">
+                <h1>
+                    Create Stunning
+                    Email Campaigns
+                </h1>
+                <h2>Create and launch email campaigns that captivate
+                    your customers in just a few clicks.</h2>
+                <div class="button-block">
+                    <button class="button1">TRY NOW</button>
+                    <button class="button2">GET A DEMO</button>
+
+
+                </div>
+
+            </div>
+
+            <img class="img" src="https://s3-alpha-sig.figma.com/img/412a/cf8d/b3dfbfcf0e383318c4d1ece066278c09?Expires=1669593600&Signature=hMA6Hv8npSK8J6sRyPy8dRRxukRTU1OfgdHS9eo3Ryxasv5c3-n4K7685qOC3gZP4Trd6YCvrfNPJ4PBHD5JyuznGaYQ2KlSPsohmmNYKyEcp7tc4-uiYgIXV9mD-UkYH4aNSHWR8YlaSnHK9AzG74rFdjLbcO0Dn8YRujUTbeUfJzEmBThoFKofsjrwTXkDby8GrU5FfS1mQotP3z1MMcPRSniYX0g2jMyLuzfUZR-ychAsVGi61JFtUI4tnse4euEaCNXVvnWSW-GlwwB0P3BdEmjyEGD-juRessivrC6H~6dEkTU~enClbJBKmUqxtPpacMGOdeIFAtgFimRJMA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+
+
+
+
+        </div>
+        <div class="mid-section2">
+            <h1>Create Stunning
+                Email
+                Campaigns</h1>
+
+
+        </div>
+        <div class="vis">
+            <p>Create and launch email campaigns that
+                captivate your customers in just a few clicks.</p>
+            <div class="button-block1">
+                <button class="button11">TRY NOW</button>
+                <button class="button22">GET A DEMO</button>
+
+
+            </div>
+
+        </div>
+
+        <!-- section3 -->
+        <div class="section3">
+            <div class="header1">
+                <h1>Reach More Customers</h1>
+                <button>LEARN HOW</button>
+            </div>
+
+        </div>
+        <!--  section4 -->
+        <div class="section4">
+            <div class="header2">
+                <div class="row">
+                    <div class="card card-0">
+                        <img src="https://s3-alpha-sig.figma.com/img/31ee/e840/92e4756c344178a7d2c96accb88468dc?Expires=1669593600&Signature=GK~VAqw9Lh4IJnUFTTwEiUSWP7Zoc0b-s0ayVGxtmCMctc2l~eMe01f5kL0yYTmNhPfvWTkLPQf1nWFlcBhB9akiA~097LU7vDX6qZMnYRg~iKd8~~ylmuKuSmTmbLecCe6H~kqupaj1QBQe39rWtXwKkeiZaUidJxzKeXXApNPfUN-JWBJZZr0EERGGppvpBj54kz6Efq9hr1YKXq7dH88eQ-dpzn5LTmWKDJ-2KXSk9ecPKC27lC0By~ihRqQqVh8~hXl6XGKVmYYlCMU5MmgaEdrkInOqFZw8A2KJ1e32gwC3l-QI~TgUwUdbvl2v4cCOnVyaXQyiHLbrbH0eHQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Avatar" style="width:100%">
+                        <div class="container">
+
+                            <p>Launch campaigns but also find new customers. Our unique platform handles campaigns from start to end.</p>
+                            <a href="">Learn More ></a>
+                        </div>
+                    </div>
+                    <div class="card card-1">
+                        <img src="https://s3-alpha-sig.figma.com/img/cfd9/cacd/69b0d96c771db28d27924175496c0831?Expires=1669593600&Signature=OjLLRKIp5bzgFJE7MIshlEuAh-d9qP3WhMxHAkpSTOVtS1JtdewZPiQQeLodenzugDy1MdgEEoE0RZzApj2B8S0OmDuthNQBUuNdZFGVTvWCaUB4VrBn02v1ivvQrtTywCk64hVbcoFAdF6WhiIoP2aotKEjdaLzzVIgj-c7oQlIhYpdNKL3UBTui3OK~UMC1BIvtHYIIlrEJdUvEtQrXtoWGTqmjFZaRQ7HqLv7WiWoixaq8MYZTnljsjFswcSj4v9Jgeagb8QWS9pdzy90UHHeQjrjEt5R~rmQM-qPJfWuNlU1TiIWNAnzZNMSKKJvoREeWyUT1QGxPF1o10i5Ww__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" style="width:100%" alt="Avatar">
+                        <div class="container">
+
+                            <p>Start building and sharing with your team today. NinjaMail is renowned for its industry leading team collaboration tools.</p>
+                            <a href="">Learn More ></a>
+                        </div>
+                    </div>
+                    <div class="card card-2">
+                        <h1>The source for
+                            proven, engaging
+                            email campaigns</h1>
+                        <h3>
+                            Whether you’re a startup, small
+                            business, e-commerce store, or
+                            want to promote your app, NinjaMail
+                            has the feature set tailored for
+                            your business.
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        <!--    section-5-->
+        <div class="section5">
+            <div class="profile-row">
+                <div class="profile profile1">
+                    <h1>Frankie</h1>
+                    <p>Member since 2016</p>
+
+                </div>
+                <div class="profile profile2">
+                    <h1>Camile</h1>
+                    <p>Member since 2012</p>
+
+                </div>
+                <div class="profile profile3">
+                    <h1>Elayne</h1>
+                    <p>Member since 2018</p>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!--  section-6 -->
+        <div class="section-6">
+            <h1>Learn how others are reaching their audience easier than ever before.</h1>
+            <div>
+                <input type="search" placeholder="Enter your email" />
+                <button>JOIN OUR LIST</button>
+                <!-- <h4>Thanks! Email received.</h4>
+                 -->
+            </div>
+            <h4 class="mid-on">Thanks! Email received.</h4>
+
+
+        </div>
+        <div class="image-block">
+            <h1>All the best brandsalready use us.</h1>
+            <ul>
+                <li><img src="https://s3-alpha-sig.figma.com/img/ce16/72af/8075a21fc8d3dd753f4ddf57588b5e41?Expires=1669593600&Signature=fWV~BIjq0k7j44UROmYqWVO5lvlmTNVVH1fg7zi2INks3mabASTek1hrd7YZYQ1hE~pMSvcPXj4chOY2Lqub3Rko~AtFhbViKNAEdowNcIUScmRj23izo286L62ODWkBTQGD-NI27QicGuhk1tHf2nuPVFNSibkw4nUn~ZDGBotALEhCg97MJesfSEKitf~26CGSqcO~UP6NVTyzgdQhcqi~t-3keYrvSq5tmnYyuCeWfh5aHfUcPu82YJqTzp8TWhyhYbTOb8eo8hOeAby9AiuiQ8aEIVzUDGVqEuIzFNO-VpxG9gqblvakkGZmLw-NEcX9PVatDBrYjK6YpuVm3w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" /></li>
+                <li><img src="https://s3-alpha-sig.figma.com/img/3840/d840/1de045020820c2465c45634b07f9c241?Expires=1669593600&Signature=P3ltznoPpW~sGCWbo~jzFhQOG1YH-dIAn3-mTVG2NW57XoG6Af2GPc9oUyBLaGczv8K59kjglLELUfpW83OSCo90iC~u28-MZWmQ2h9ZXd0IaBvIKG-THWAwF7zb0O9vf-afG2KhpY7r0gAMn6~ymEyr42K~idgzbW7CZKgBl5xLOV9qD~qFlNh8uxrS9XgMAuitFNYOqck5av~gikw1wL44tdsfepODJ89nGeJi0AAoNbC~Draj7juPc~NY6Uj3aLoQs1BQcbN05dsHCypPWPiGoLlf~sZztq-oi39eH8h2kUV3aZ4Toipob7arrVDa3Pdn2WGC~rbpqI8rCaq8MQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" /></li>
+                <li><img src="https://s3-alpha-sig.figma.com/img/da9b/2fae/c6bd227cc63b3fc267bd66f6fb44617b?Expires=1669593600&Signature=gzDTjl8U9U1mhW0UtOfmiDPy9xOHec~Tn3KUPzgO49u3lBnwefR2WxoGrqxtXlEvaFI4gWXSfxyTjpdSA3kBXMUy9m5w8g8jK-g5TUFrXOeqpKgaQU9J2S64WBut8pCcbOyAHPT0gSLknfEmbUb9jWc-PRbF2Xo1TUxniuVFL8GOvmRHQ1OKywpJtkePTQhb2MEVrnGyrvBKSyK-Prj3VD60IwwAQvTgfog1VAsRlzptoYBf1mhlBjnjqXIVGXZKYY9DNCAbk2r8rv1GCfkVbs0N~EV13FUrcoyVs8CQjNsmOzuda4tOucPOqizAWoEqGiA~0lNXLBIqMNPtcEer7Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" /></li>
+                <li><img src="https://s3-alpha-sig.figma.com/img/2854/3f9e/3fd1ff0ed0270485589100731c2157d3?Expires=1669593600&Signature=c4rK7-e5aQsmPtdsbIfBT8pWsOB5dpzdJBcHfkaQRvcvXlGh9fIXVRN6~CopkHTmUvvvcACvnOqmtPQajdHCW~TRv6pqsfiVi7jxptEiXyK8MDDaDmpC5FJKmE5Iq4WZKCpg1Yx2n5mkhxqGF9GYqNethezQuOmB-dORipFe0ftpLifJrD-CW9MLc4OIME0N8VBCef03kj3NvL~z9zuiv2ERjgboCWgdemShiGK-mh6k1Jupu-bdP8~i~Pzr6J1GuWQaa2ggqiqvGPqtLL6Mjplly2TeZ9j1TLTD8rMCUZrhsk0TEVAKtNHImYiio8d7TXVpCINpsAVu9ihceact7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" /></li>
+                <li><img src="https://s3-alpha-sig.figma.com/img/2a97/57f2/9370ec10ec655c077984883c350bfa0c?Expires=1669593600&Signature=Ay47D5WG4CQ4ir3TCwm9SOFEdQ2Fbxyci79oarlvWFyAqBF6tmvId4Y1gsMDuZrydwoF-wWHxz~jYaPsLAiFY8t13jQjhI69uQZg2~oWTONQ5HpYauo6W8TcTMedZ0OXWxt18S3RxNFShs~oBUPFklq6tfqszmQzqjkIsQd9Jh-cIIoNaxyseTQZ99mWM1tf-7xhXIqYuAwLuVknEx-bxt3Eqt3wGQVBEEtUl1RdKEaipaIE5Q5la~ZyyeuXjEsroMWIpFHxl6UPwyy1JvOtNZ9eLeKIpzvSzaS2hWXIuOEN19b14iuqNC7Sep0c7hvolaauS-h-4BYzS7aKHHonTg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" /></li>
+            </ul>
+        </div>
+        <!--   section-7 -->
+        <div class="green-card">
+            <h1 class="heading">Get started today!</h1>
+
+            <button class="button">Pick A Plan </button>
+
+        </div>
+        <!--   section-8 -->
+        <div class="footer">
+
+            <div class="bottom">
+                <div>
+                    <h4> NinjaMail</h4>
+                </div>
+                <div>
+
+                    <a href="/">Features</a>
+                    <a href="/">Pricing</a>
+                    <a href="/">Services</a>
+                    <a href="/">Partners</a>
+                </div>
+                <div>
+
+                    <a href="/">About Us</a>
+                    <a href="/"> Tutorials</a>
+                    <a href="/"> Resources</a>
+                    <a href="/"> Help Center</a>
+                    <a href="/"> Templates</a>
+                    <a href="/"> Case Studies</a>
+                </div>
+                <div>
+
+                    <a href="/">Medium</a>
+                    <a href="/">Twitter</a>
+                    <a href="/">Facebook</a>
+                    <a href="/">Instagram</a>
+                    <a href="/">Linkedin</a>
+                </div>
+                <div>
+
+                    <a href="/">Contact Us</a>
+                    <a href="/">Slack</a>
+                    <a href="/">Jobs</a>
+
+                </div>
+            </div>
+            <hr />
+            <div class="bottom">
+                <div>
+                    <a href="/">1.2019 Quest Al,All rights reserved.</a>
+                </div>
+                <div>
+                    <a href="/">Terms & Conditions</a>
+                </div>
+                <div>
+                    <a href="/">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
